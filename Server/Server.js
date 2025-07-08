@@ -41,7 +41,7 @@ app.use(express.urlencoded({extended : false}));
 app.use(cookieParser());
 
 // Origin
-const allowedOrigins = ['http://localhost:5173','https://mern-green-cart-app-frontend.vercel.app'];
+const allowedOrigins = ['http://localhost:5173','https://mern-green-cart-app-backend.onrender.com'];
 
 // Cors
 app.use(cors({origin : allowedOrigins,credentials : true}));
