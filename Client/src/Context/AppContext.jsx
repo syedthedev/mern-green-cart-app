@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 
@@ -12,7 +12,6 @@ export const AppContextProvider = (props) => {
     const currency = import.meta.env.VITE_CURRENCY;
 
     const navigate = useNavigate();
-    const location = useLocation();
 
     const [user, setUser] = useState(null);
     const [isSeller, setIsSeller] = useState(false);
@@ -116,14 +115,6 @@ export const AppContextProvider = (props) => {
         fetchUser();
         fetchProduct();
     }, []);
-
-    useEffect(() => {
-        const search = new URLSearchParams(location.search);
-        if (search.get("next") === "my-orders") {
-            fetchUser();
-            navigate("/my-orders");
-        }
-    }, [location.search]);
 
     const value = {
         backendUrl,
