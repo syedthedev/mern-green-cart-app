@@ -2,8 +2,8 @@
 
 An advanced, full-stack **E-Commerce Web App** built with the MERN stack, supporting both **Admin/Seller** and **User** flows including product management, secure authentication, cart functionality, and payments using **Stripe**.
 
-🌐 **Live Preview:**  
-[https://mern-green-cart-app-frontend.vercel.app](https://mern-green-cart-app-frontend.vercel.app)
+**Live Preview:**  
+🌐[visit](https://mern-green-cart-app-frontend.vercel.app)
 
 ---
 
@@ -77,7 +77,8 @@ cd mern-green-cart-app
 # 2. Backend
 cd Server
 npm install
+node Server.js
 
-# 3. Front
+# 3. Frontend
 cd Client
 npm run dev
