@@ -12,6 +12,9 @@ import orderRouter from './Routes/orderRoute.js';
 import addressRouter from './Routes/addressRouter.js';
 import { stripeWebhooks } from './Controllers/orderController.js';
 import connectCloudinary from './Helper/Cloudinary.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
