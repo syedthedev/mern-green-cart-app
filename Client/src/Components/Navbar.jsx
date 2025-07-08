@@ -83,7 +83,7 @@ function Navbar() {
       <div className={`${open ? 'flex' : 'hidden'} z-50 absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">All Product</NavLink>
-        {user && <NavLink to="/products">My Orders</NavLink>}
+        {user && <NavLink to="/my-orders">My Orders</NavLink>}
         <NavLink to="/contact">Contact</NavLink>
         {!user ? (
             <button onClick={() => {
