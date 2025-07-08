@@ -38,7 +38,7 @@ app.use(express.urlencoded({extended : false}));
 app.use(cookieParser());
 
 // Origin
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173','https://mern-green-cart-app-frontend.vercel.app'];
 
 // Stripe
 app.post('/stripe',express.raw({type  : "application/json"}),stripeWebhooks);
