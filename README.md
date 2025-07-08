@@ -73,9 +73,11 @@ An advanced, full-stack **E-Commerce Web App** built with the MERN stack, suppor
 # 1.Clont The Repo
 git clone https://github.com/syedthedev/mern-green-cart-app.git
 cd mern-green-cart-app
+
 # 2. Backend
 cd Server
 npm install
+
 # 3. Front
 cd Client
 npm run dev
