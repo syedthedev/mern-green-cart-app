@@ -30,6 +30,9 @@ mongoose.connect(`${process.env.MONGODB_URL}/greencart`)
 // Cloudinary        
 await connectCloudinary();
 
+// Stripe
+app.post('/stripe',express.raw({type  : "application/json"}),stripeWebhooks);
+
 // Body-Parser 
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
@@ -39,9 +42,6 @@ app.use(cookieParser());
 
 // Origin
 const allowedOrigins = ['http://localhost:5173','https://mern-green-cart-app-frontend.vercel.app'];
-
-// Stripe
-app.post('/stripe',express.raw({type  : "application/json"}),stripeWebhooks);
 
 // Cors
 app.use(cors({origin : allowedOrigins,credentials : true}));
