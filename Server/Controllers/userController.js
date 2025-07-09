@@ -13,7 +13,7 @@ export const register = async (req, res) => {
         const existUser = await User.findOne({ email });
         if (existUser) return res.json({ success: false, msg: 'User already exists' });
 
-        const hash_pass = hashPassword(password);
+        const hash_pass = await hashPassword(password);
         const user = new User({ name, email, password: hash_pass });
         const saveUser = await user.save();
 
@@ -21,7 +21,7 @@ export const register = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: process.env.NODE_ENV === "production" ? 'none' : 'strict',
+            sameSite: process.env.NODE_ENV === "production" ? 'None' : 'Lax',
             maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
@@ -42,14 +42,14 @@ export const login = async (req, res) => {
         const user = await User.findOne({ email });
         if (!user) return res.json({ success: false, msg: 'User not found!' });
 
-        const isMatch = comparePassword(password, user.password);
+        const isMatch = await  comparePassword(password, user.password);
         if (!isMatch) return res.json({ success: false, msg: 'Invalid password' });
 
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
         res.cookie('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: process.env.NODE_ENV === "production" ? 'none' : 'strict',
+            sameSite: process.env.NODE_ENV === "production" ? 'None' : 'Lax',
             maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
@@ -65,7 +65,7 @@ export const logout = async (req, res) => {
         res.clearCookie('token', {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: process.env.NODE_ENV === "production" ? 'none' : 'strict'
+            sameSite: process.env.NODE_ENV === "production" ? 'None' : 'Lax'
         });
         res.json({ success: true, msg: 'Logged Out' });
     } catch (err) {
