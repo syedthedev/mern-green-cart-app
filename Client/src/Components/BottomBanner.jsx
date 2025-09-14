@@ -7,7 +7,7 @@ function BottomBanner() {
       <img src={assets.bottom_banner_image} alt="banner" className='w-full hidden md:block' />
       <img src={assets.bottom_banner_image_sm} alt="banner" className='w-full md:hidden' />
 
-      <div className='absolute inset-0 -top-10 flex flex-col items-center md:items-end md:justify-center pt-16 md:pt-0 md:pr-24'>
+      <div className='absolute inset-0 -top-8 flex flex-col items-center md:items-end md:justify-center pt-16 md:pt-0 md:pr-24'>
         <div className='max-w-md md:max-w-lg bg-white/90 md:bg-transparent p-4 md:p-0 rounded-md'>
           <h1 className='text-2xl md:text-3xl font-semibold text-primary mb-6'>Why We Are The Best?</h1>
           {features.map((feature, index) => (
