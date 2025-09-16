@@ -31,7 +31,7 @@ mongoose.connect(`${process.env.MONGODB_URL}/greencart`)
 await connectCloudinary();
 
 // Origin
-const allowedOrigins = ['https://mern-green-cart-frontend-app.vercel.app','http://localhost:5173','https://greencartnow.store','https://www.greencartnow.store',];
+const allowedOrigins = ['https://mern-green-cart-frontend-app.vercel.app','http://localhost:5173','https://greencartnow.store','https://www.greencartnow.store'];
 
 // Cors
 app.use(cors({origin : allowedOrigins,credentials : true}));
