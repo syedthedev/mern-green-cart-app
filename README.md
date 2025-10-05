@@ -4,7 +4,7 @@ An advanced, full-stack **E-Commerce Web App** built with the MERN stack, suppor
 
 **Live Preview:**  
 
-🌐 [Visit Live App](https://mern-green-cart-app-frontend.vercel.app)
+🌐 [Visit Live App](https://greencartnow.store/)
 
 ---
 
