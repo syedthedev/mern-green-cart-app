@@ -18,6 +18,12 @@ import AddProduct from './Pages/Seller/AddProduct.jsx';
 import ProductList from './Pages/Seller/ProductList.jsx';
 import Orders from './Pages/Seller/Orders.jsx';
 import Loading from './Components/Loading.jsx';
+import PrivacyPolicy from './Components/Policies/PrivacyPolicy.jsx';
+import TermsAndConditions from './Components/Policies/TermsAndConditions.jsx';
+import CancellationRefund from './Components/Policies/CancellationRefund.jsx';
+import ShippingDelivery from './Components/Policies/ShippingDelivery.jsx';
+import ContactUs from './Components/Policies/ContactUs.jsx';
+
  
 function App() {
   const isSellerPath = useLocation().pathname.includes("seller");
@@ -39,6 +45,11 @@ function App() {
           <Route path='/add-address' element={<AddAddress />} />
           <Route path='/my-orders' element={<MyOrders />} />
           <Route path='/loader' element={<Loading />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
+          <Route path='/cancellation-refund' element={<CancellationRefund />} />
+          <Route path='/shipping-delivery' element={<ShippingDelivery />} />
+          <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/seller' element={isSeller ? <SellerLayout /> : <SellerLogin />}>
             <Route index element={isSeller ? <AddProduct /> : null} />
             <Route path='product-list' element={isSeller ? <ProductList /> : null} />
