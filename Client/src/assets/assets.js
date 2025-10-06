@@ -149,32 +149,30 @@ export const footerLinks = [
   {
     title: "Quick Links",
     links: [
-      { text: "Home", url: "#" },
-      { text: "Best Sellers", url: "#" },
-      { text: "Offers & Deals", url: "#" },
-      { text: "Contact Us", url: "#" },
-      { text: "FAQs", url: "#" },
+      { text: "Home", url: "/" },
+      { text: "All Products", url: "/products" },
+      { text: "Contact Us", url: "/contact-us" },
     ],
   },
   {
     title: "Need help?",
     links: [
-      { text: "Delivery Information", url: "#" },
-      { text: "Return & Refund Policy", url: "#" },
-      { text: "Payment Methods", url: "#" },
-      { text: "Track your Order", url: "#" },
-      { text: "Contact Us", url: "#" },
+      { text: "Terms and Conditions", url: "/terms-and-conditions" },
+      { text: "Privacy Policy", url: "/privacy-policy" },
+      { text: "Shipping And Delivery", url: "/shipping-delivery" },
+      { text: "Orders", url: "/my-orders" },
+      { text: "Contact Us", url: "/contact-us" },
     ],
   },
-  {
-    title: "Follow Us",
-    links: [
-      { text: "Instagram", url: "#" },
-      { text: "Twitter", url: "#" },
-      { text: "Facebook", url: "#" },
-      { text: "YouTube", url: "#" },
-    ],
-  },
+  // {
+  //   title: "Follow Us",
+  //   links: [
+  //     { text: "Instagram", url: "#" },
+  //     { text: "Twitter", url: "#" },
+  //     { text: "Facebook", url: "#" },
+  //     { text: "YouTube", url: "#" },
+  //   ],
+  // },
 ];
 
 export const features = [

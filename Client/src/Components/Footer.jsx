@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets, footerLinks } from '../assets/assets';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
 
@@ -17,7 +18,7 @@ function Footer() {
                             <ul className="text-sm space-y-1">
                                 {section.links.map((link, i) => (
                                     <li key={i}>
-                                        <a href={link.url} className="hover:underline transition">{link.text}</a>
+                                        <NavLink to={link.url} className="hover:underline transition">{link.text}</NavLink>
                                     </li>
                                 ))}
                             </ul>
