@@ -160,7 +160,6 @@ export const footerLinks = [
       { text: "Terms and Conditions", url: "/terms-and-conditions" },
       { text: "Privacy Policy", url: "/privacy-policy" },
       { text: "Shipping And Delivery", url: "/shipping-delivery" },
-      { text: "Orders", url: "/my-orders" },
       { text: "Contact Us", url: "/contact-us" },
     ],
   },

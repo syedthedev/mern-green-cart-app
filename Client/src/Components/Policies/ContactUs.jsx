@@ -10,7 +10,7 @@ function ContactUs() {
       <div className="space-y-2">
         <p><b>Business Name:</b> GreenCart</p>
         <p><b>Email:</b> <a href="mailto:support@greencartnow.store" className="text-green-600 underline">support@greencartnow.store</a></p>
-        <p><b>Phone:</b> +91-9876543210</p>
+        <p><b>Phone:</b> +91-8438167384</p>
         <p><b>Address:</b>122/B,TVK Nagar,Trichy</p>
       </div>
     </section>

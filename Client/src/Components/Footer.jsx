@@ -18,7 +18,7 @@ function Footer() {
                             <ul className="text-sm space-y-1">
                                 {section.links.map((link, i) => (
                                     <li key={i}>
-                                        <NavLink to={link.url} className="hover:underline transition">{link.text}</NavLink>
+                                        <NavLink to={link.url} onClick={() => window.scrollTo(0, 0)}  className="hover:underline transition">{link.text}</NavLink>
                                     </li>
                                 ))}
                             </ul>
